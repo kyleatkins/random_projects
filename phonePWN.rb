@@ -18,14 +18,14 @@ __________.__                        __________  __      _________
 #require's an active Twilio account
 ACCOUNT_SID = 'Account ID Here' #can be found in account settings
 AUTH_TOKEN = 'Account Token Here' #can be found in account settings
-attack = '+1TARGET_PHONE_HERE'  #The phone number you wish to send to format as '+14445556666'
-accountPhone = '+1ACCOUNTPHONE#HERE' #Your Twilio account phone number format as '+14445556666'
+Attack = '+1TARGET_PHONE_HERE'  #The phone number you wish to send to format as '+14445556666'
+AccountPhone = '+1ACCOUNTPHONE#HERE' #Your Twilio account phone number format as '+14445556666'
 
 x = 0
 while x < 2000 do # set the amount of texts or phone calls here
 
-send_to = attack
-phone_number = accountPhone
+send_to = Attack
+phone_number = AccountPhone
 
 client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
 
