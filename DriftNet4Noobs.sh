@@ -1,7 +1,7 @@
 #!/bin/bash
 #DriftNet4Noobs v1.0 //Kyle Atkins\\
 #Requires Linux root user / aircrack suite / common sense
-echo "
+echo -e "\e[91m
  _____   _     _  ______  _______  _    _    _     _                _          
 (_____) (_)   (_)(______)(__ _ __)(_)  (_)  (_)   (_)              (_)    ____ 
 (_)  (_)(__)_ (_)(_)__      (_)   (_)__(_)_ (__)_ (_)  ___    ___  (_)_  (____)
@@ -10,11 +10,20 @@ echo "
 (_____) (_)   (_)(______)   (_)        (_)  (_)   (_) (___)  (___) (____)(____)
                                                                                
 "
-echo -e "\e[36m Hello, $USER Setting up sniffing enviroment"
+#check if user === root
+if [ "$UID" -ne 0 ]; then
+        echo -e "\e[36m Script must be run as root, please login to continue"
+        sleep 1
+        exit
+else
+        #start wireless adapter in monitor mode
+        echo -e "\e[36m Starting wireless adapter in monitor mode"
+        sleep 1
+        airmon-ng start wlan0
+fi
+echo "Hello, $USER Setting up sniffing enviroment"
 echo -e "\e[4mPASSWORD SECURED NETWORKS ONLY WORK IF WEP ENCRYPTION!!!"
 echo -e "\e[0m"
-eval "airmon-ng start wlan0"
-sleep 0.5
 echo -e "\e[92m Which BSSID would you like to capture from?(ie 00:11:22:33:44)"
 read bssid
 echo -n "Does this network have a wifi password?:[Y/n] "
