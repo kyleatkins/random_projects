@@ -33,15 +33,15 @@ if [[ ($pass_answer = "y") || ($pass_answer = "Y") ]];
 	echo -n "What is the password?"
 	read wifi_password
 	echo "Ok running airtun-ng now..."
-	eval "airtun-ng -a $bssid -w $pass_answer -t 1 mon0"
+	xterm -e airtun-ng -a $bssid -w $pass_answer -t 1 mon0
 	eval "ifconfig at0 up"
-	eval "driftnet -v -i at0"
+	xterm -e driftnet -v -i at0
 else
-	echo "Ok no password.."
-	eval "airtun-ng -a $bssid -t 1 mon0"
-	sleep 0.5
-	eval "ifconfig at0 up"
-	sleep 0.5
+	echo "Ok no password..."
+	sudo -b gnome-terminal --execute bash -c "airtun-ng -a $bssid -t 1 mon0"
+	sleep 1
+	sudo -b gnome-terminal --execute bash -c "ifconfig at0 up"
+	sleep 1	
 	eval "driftnet -v -i at0"
 fi
 echo "End of the line"
