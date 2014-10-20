@@ -1,6 +1,6 @@
 #!/bin/bash
 # WiFi Deauthetication Script v1.0 Kyle Atkins
-# Requires airmon-ng airodump-ng aireplay-ng and wifi card capable of packet injection
+# Requires airmon-ng airodump-ng aireplay-ng and wifi card capable of packet injection.
      
 #check if user === root
 if [ "$UID" -ne 0 ]; then
