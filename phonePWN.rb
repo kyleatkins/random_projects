@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 #PhonePWN v1.0 - Kyle Atkins
 #Usage of script is your responsibility. Denial of service may be ILLEGAL!!!!
-#Exploits the Twilio API, allows mass text / phone call spam
+#Exploits the Twilio API, allows mass text / phone call spam.
 
 require 'rubygems'
 require 'twilio-ruby'
