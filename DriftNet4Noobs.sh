@@ -1,6 +1,6 @@
 #!/bin/bash
 #DriftNet4Noobs v1.0 //Kyle Atkins\\
-#Requires Linux root user / aircrack suite / common sense
+#Requires Linux root user / aircrack suite / common sense.
 echo -e "\e[91m
  _____   _     _  ______  _______  _    _    _     _                _          
 (_____) (_)   (_)(______)(__ _ __)(_)  (_)  (_)   (_)              (_)    ____ 
