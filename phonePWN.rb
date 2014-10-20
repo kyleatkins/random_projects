@@ -30,6 +30,7 @@ phone_number = AccountPhone
 client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
 
 #Text message spam
+#Comment out section to omit text or phone calls
 client.account.sms.messages.create(
 	:from => phone_number,
 	:to => send_to,
@@ -37,6 +38,7 @@ client.account.sms.messages.create(
 	)
 
 #Phone call spam
+#Comment out section to omit text or phone calls
 client.account.calls.create(
 	:from => phone_number,
 	:to => send_to,
