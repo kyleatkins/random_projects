@@ -1,8 +1,5 @@
 #!/usr/bin/ruby
 #PhonePWN v2.0 - Kyle Atkins
-#Usage of script is your responsibility. Denial of service may be ILLEGAL!!!!
-#Exploits the Twilio API, allows mass text / phone call spam.
-
 require 'rubygems'
 require 'twilio-ruby'
 
@@ -22,7 +19,7 @@ Attack = '+1TARGET_PHONE_HERE'  #The phone number you wish to send to format as 
 AccountPhone = '+1ACCOUNTPHONE#HERE' #Your Twilio account phone number format as '+14445556666'
 
 x = 0
-while x < 2000 do # set the amount of texts or phone calls here
+while x < 20 do # set the amount of texts or phone calls here
 
 send_to = Attack
 phone_number = AccountPhone
